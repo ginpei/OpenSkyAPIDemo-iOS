@@ -12,6 +12,7 @@
 		E40FA7841EE74B5400772F62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E40FA7821EE74B5400772F62 /* Main.storyboard */; };
 		E40FA7861EE74B5400772F62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E40FA7851EE74B5400772F62 /* Assets.xcassets */; };
 		E40FA7891EE74B5400772F62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E40FA7871EE74B5400772F62 /* LaunchScreen.storyboard */; };
+		E4CACF2E1EE8BF6900A5699D /* OpenSkyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CACF2D1EE8BF6900A5699D /* OpenSkyState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		E40FA7851EE74B5400772F62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E40FA7881EE74B5400772F62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E40FA78A1EE74B5400772F62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4CACF2D1EE8BF6900A5699D /* OpenSkyState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSkyState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				E40FA77E1EE74B5400772F62 /* AppDelegate.swift */,
 				E40FA7801EE74B5400772F62 /* ViewController.swift */,
+				E4CACF2D1EE8BF6900A5699D /* OpenSkyState.swift */,
 				E40FA7821EE74B5400772F62 /* Main.storyboard */,
 				E40FA7851EE74B5400772F62 /* Assets.xcassets */,
 				E40FA7871EE74B5400772F62 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			files = (
 				E40FA7811EE74B5400772F62 /* ViewController.swift in Sources */,
 				E40FA77F1EE74B5400772F62 /* AppDelegate.swift in Sources */,
+				E4CACF2E1EE8BF6900A5699D /* OpenSkyState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +303,7 @@
 				E40FA78F1EE74B5400772F62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

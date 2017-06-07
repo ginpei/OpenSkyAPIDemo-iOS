@@ -37,17 +37,13 @@ class ViewController: UIViewController {
     
     func pickUpData(from data: Data?) throws -> Any {
         let json = try JSONSerialization.jsonObject(with: data!, options:.allowFragments) as! [String : AnyObject]
-        for (key, value) in json {
-            print(key)
-        }
         if let stateList = json["states"] as? [[Any]] {
             for row in stateList {
-                if
-                    let icao24 = row[0] as? String,
-                    let originCountry = row[2] as? String,
-                    let longitude = row[5] as? Double
-                {
-                    print("\(icao24), \(originCountry), \(longitude)")
+                if let state = OpenSkyState.from(array: row) {
+                    print("yay \(state.originCountry)")
+                }
+                else {
+                    print("oops \(row)")
                 }
             }
         }
