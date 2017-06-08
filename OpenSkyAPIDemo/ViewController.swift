@@ -27,7 +27,10 @@ class ViewController: UIViewController {
             }
             else {
                 do {
-                    try self.pickUpData(from: data)
+                    let states = try self.pickUpData(from: data)
+                    for state in states {
+                        print("\(state.originCountry) [\(state.longitude),\(state.latitude)]")
+                    }
                 } catch let error as NSError {
                     print(error)
                 }
@@ -35,22 +38,19 @@ class ViewController: UIViewController {
         }.resume()
     }
     
-    func pickUpData(from data: Data?) throws -> Any {
+    func pickUpData(from data: Data?) throws -> [OpenSkyState] {
+        var states = [OpenSkyState]()
+        
         let json = try JSONSerialization.jsonObject(with: data!, options:.allowFragments) as! [String : AnyObject]
         if let stateList = json["states"] as? [[Any]] {
             for row in stateList {
                 if let state = OpenSkyState.from(array: row) {
                     print("yay \(state.originCountry)")
-                }
-                else {
-                    print("oops \(row)")
+                    states.append(state)
                 }
             }
         }
-        else {
-            print("BOOOOOO")
-        }
-        return json
+        return states
     }
 
     override func didReceiveMemoryWarning() {
