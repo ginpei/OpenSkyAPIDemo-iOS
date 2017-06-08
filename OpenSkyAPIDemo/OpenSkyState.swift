@@ -19,7 +19,7 @@ class OpenSkyState {
             let longitude = row[5] as? Double,
             let latitude = row[6] as? Double,
             let altitude = row[7] as? Double,
-            let on_ground = row[8] as? Bool,
+            let onGround = row[8] as? Bool,
             let velocity = row[9] as? Double,
             let heading = row[10] as? Double,
             let verticalRate = row[11] as? Double
@@ -33,7 +33,7 @@ class OpenSkyState {
                 longitude: longitude,
                 latitude: latitude,
                 altitude: altitude,
-                on_ground: on_ground,
+                onGround: onGround,
                 velocity: velocity,
                 heading: heading,
                 verticalRate: verticalRate
@@ -52,12 +52,12 @@ class OpenSkyState {
     let longitude: Double
     let latitude: Double
     let altitude: Double
-    let on_ground: Bool
+    let onGround: Bool
     let velocity: Double
     let heading: Double
     let verticalRate: Double
 
-    init(icao24: String, callsign: String, originCountry: String, timePosition: Double, timeVelocity: Double, longitude: Double, latitude: Double, altitude: Double, on_ground: Bool, velocity: Double, heading: Double, verticalRate: Double) {
+    init(icao24: String, callsign: String, originCountry: String, timePosition: Double, timeVelocity: Double, longitude: Double, latitude: Double, altitude: Double, onGround: Bool, velocity: Double, heading: Double, verticalRate: Double) {
         self.icao24 = icao24
         self.callsign = callsign
         self.originCountry = originCountry
@@ -66,7 +66,7 @@ class OpenSkyState {
         self.longitude = longitude
         self.latitude = latitude
         self.altitude = altitude
-        self.on_ground = on_ground
+        self.onGround = onGround
         self.velocity = velocity
         self.heading = heading
         self.verticalRate = verticalRate
