@@ -29,7 +29,12 @@ class ViewController: UIViewController {
                 do {
                     let states = try self.pickUpData(from: data)
                     for state in states {
-                        print("\(state.originCountry) [\(state.longitude),\(state.latitude)]")
+                        if let long = state.longitude, let lat = state.latitude {
+                            print("\(state.originCountry) [\(long),\(lat)]")
+                        }
+                        else {
+                            print("\(state.originCountry) (Unknown place)")
+                        }
                     }
                 } catch let error as NSError {
                     print(error)
