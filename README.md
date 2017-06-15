@@ -61,4 +61,4 @@ Check [official document](https://opensky-network.org/apidoc/rest.html).
 
 # Who made this example
 
-Made by a student studying Swift and iOS. ¯\_(ツ)_/¯
+Made by a student studying Swift and iOS. ¯\\\_(ツ)\_/¯
